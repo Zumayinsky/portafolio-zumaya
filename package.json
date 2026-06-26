@@ -8,15 +8,15 @@
 },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Zumayinsky/git-clone.git"
+    "url": "git+https://github.com/Zumayinsky/portafolio-zumaya.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Zumayinsky/git-clone/issues"
+    "url": "https://github.com/Zumayinsky/portafolio-zumaya/issues"
   },
-  "homepage": "https://github.com/Zumayinsky/git-clone#readme",
+  "homepage": "https://zumayinsky.github.io/portafolio-zumaya/",
   "devDependencies": {
     "vite": "^8.1.0"
   }
