@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>CV - Juan Carlos Zumaya Ramirez</title>
+    <style>
+        @page { size: A4; margin: 14mm 16mm; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            font-size: 9.5pt;
+            line-height: 1.35;
+            color: #1a1a1a;
+            background: #fff;
+        }
+        .page { page-break-after: always; }
+        .page:last-child { page-break-after: auto; }
+
+        header {
+            border-bottom: 2px solid #0d6e3f;
+            padding-bottom: 8px;
+            margin-bottom: 10px;
+        }
+        h1 {
+            font-size: 18pt;
+            color: #0d6e3f;
+            letter-spacing: 0.5px;
+        }
+        .titles {
+            font-size: 8.5pt;
+            font-weight: 600;
+            color: #333;
+            margin-top: 4px;
+        }
+        .contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 14px;
+            font-size: 8.5pt;
+            margin-top: 6px;
+            color: #444;
+        }
+        .cedulas {
+            font-size: 8pt;
+            color: #666;
+            margin-top: 4px;
+            font-family: Consolas, monospace;
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: 1fr 190px;
+            gap: 14px;
+        }
+
+        h2 {
+            font-size: 10pt;
+            color: #0d6e3f;
+            text-transform: uppercase;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 2px;
+            margin: 10px 0 6px;
+        }
+        h2:first-child { margin-top: 0; }
+
+        p, li { margin-bottom: 4px; }
+        ul { padding-left: 14px; }
+        li { margin-bottom: 3px; }
+
+        .entry { margin-bottom: 7px; }
+        .entry-title { font-weight: 700; }
+        .entry-sub { font-size: 8.5pt; color: #555; }
+        .entry-date { font-size: 8pt; color: #0d6e3f; font-weight: 600; }
+
+        aside h2 { margin-top: 0; }
+        aside ul { list-style: none; padding-left: 0; }
+        aside li {
+            padding: 2px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 8.5pt;
+        }
+
+        .flag { vertical-align: middle; width: 16px; margin-right: 4px; }
+        .portfolio {
+            margin-top: 8px;
+            font-size: 8.5pt;
+            word-break: break-all;
+        }
+        .portfolio a { color: #0d6e3f; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<div class="page">
+    <header>
+        <h1>JUAN CARLOS ZUMAYA RAMIREZ</h1>
+        <div class="titles">
+            INGENIERO EN SISTEMAS | DESARROLLADOR DE SOFTWARE | ANALISTA DE DATOS | ELECTRÓNICA DIGITAL | FREELANCER
+        </div>
+        <div class="contact">
+            <span>Irapuato, Guanajuato, México</span>
+            <span>WhatsApp: 462 264 7020</span>
+            <span>jrcarlos.20@gmail.com</span>
+            <span>LinkedIn: linkedin.com/in/juan-carlos-zumaya-ramirez-8a1607256</span>
+        </div>
+        <div class="cedulas">
+            Cédula Estatal: 00030736 | Cédula Federal: 15130329 | 15550978 | NSS: 72169728580
+        </div>
+    </header>
+
+    <div class="layout">
+        <main>
+            <h2>Objetivo</h2>
+            <p>
+                Ingeniero en Sistemas y en Electrónica con experiencia en programación, automatización y análisis de datos.
+                Con conocimientos enfocados en dispositivos electrónicos y su aplicación. Con deseos de aprender y con fácil
+                adaptación al ambiente de trabajo. Optimista y buena actitud. Resolviendo problemas de manera eficaz.
+            </p>
+
+            <h2>Formación</h2>
+            <div class="entry">
+                <div class="entry-title">Maestría en Inteligencia Artificial</div>
+                <div class="entry-date">Julio/2025 – En curso</div>
+                <div class="entry-sub">Universidad Virtual del Estado de Guanajuato</div>
+            </div>
+            <div class="entry">
+                <div class="entry-title">Licenciatura en Ingeniería en Comunicaciones y Electrónica</div>
+                <div class="entry-date">12/08/2019 – 11/06/2025</div>
+                <div class="entry-sub">Universidad de Guanajuato</div>
+            </div>
+            <div class="entry">
+                <div class="entry-title">Licenciatura en Ingeniería en Sistemas Computacionales</div>
+                <div class="entry-date">08/06/2020 – 31/05/2023</div>
+                <div class="entry-sub">Universidad Virtual del Estado de Guanajuato</div>
+            </div>
+            <div class="entry">
+                <div class="entry-title">Curso Fundamentos de la Inteligencia Artificial</div>
+                <div class="entry-date">11/07/2023 – 11/10/2023</div>
+                <div class="entry-sub">Universidad de Guanajuato</div>
+            </div>
+            <div class="entry">
+                <div class="entry-title">Curso Introducción a la Robótica</div>
+                <div class="entry-date">11/03/2023 – 20/04/2023</div>
+                <div class="entry-sub">Universidad de Guanajuato</div>
+            </div>
+            <div class="entry">
+                <div class="entry-title">Curso Introducción a la Industria 4.0</div>
+                <div class="entry-date">19/07/2023 – 10/11/2023</div>
+                <div class="entry-sub">Universidad de Guanajuato</div>
+            </div>
+            <div class="entry">
+                <div class="entry-title">Curso Diseñador de Circuitos Impresos (PCB)</div>
+                <div class="entry-date">31/08/2022 – 28/11/2022</div>
+                <div class="entry-sub">Capacítate para el empleo – Fundación Carlos Slim</div>
+            </div>
+            <p><strong>Miembro de la Organización SPIE</strong> (Sociedad Internacional de Óptica y Fotónica)</p>
+
+            <h2>Experiencia Laboral</h2>
+            <div class="entry">
+                <div class="entry-title">Desarrollador software y Analista de Datos</div>
+                <div class="entry-sub">SISTEBIT Smart Solutions</div>
+                <div class="entry-date">2026</div>
+            </div>
+            <div class="entry">
+                <div class="entry-title">Fundador e Ingeniero Principal</div>
+                <div class="entry-sub">ZUMATEK</div>
+                <div class="entry-date">2026</div>
+            </div>
+            <div class="entry">
+                <div class="entry-title">Docente Bachiller Bivalente de Talentos</div>
+                <div class="entry-date">01/08/2025 – 15/12/2025</div>
+            </div>
+            <div class="entry">
+                <div class="entry-title">Docente Academia Alto Rendimiento</div>
+                <div class="entry-sub">SANSEN</div>
+                <div class="entry-date">05/08/2018 – 30/12/2020</div>
+            </div>
+        </main>
+
+        <aside>
+            <h2>Datos Personales</h2>
+            <ul>
+                <li>Edad: 28 años</li>
+                <li>Estado civil: Soltero</li>
+                <li>Vehículo propio</li>
+                <li>Buena movilidad de lugar y zona</li>
+                <li>Disponibilidad de trabajo inmediata</li>
+            </ul>
+
+            <h2>Idiomas</h2>
+            <ul>
+                <li>Español (Natal)</li>
+                <li><img class="flag" src="https://flagcdn.com/w20/us.png" alt="USA"> Inglés – Nivel C2</li>
+            </ul>
+
+            <h2>Intereses</h2>
+            <ul>
+                <li>Tecnología e innovación</li>
+                <li>Creación y edición de imágenes y videos</li>
+            </ul>
+        </aside>
+    </div>
+</div>
+
+<div class="page">
+    <div class="layout">
+        <main>
+            <h2>Proyectos Destacados</h2>
+            <ul>
+                <li><strong>Autor del libro: Manual de Supervivencia Web</strong> – Publicación independiente (2025 – 2026)</li>
+                <li><strong>Robot Avatar Protheus (Proyecto Inbiodroid)</strong> – Inbiodroid, participación en competencia en Los Ángeles</li>
+                <li><strong>The Crazy Bee</strong> – Videojuego multiplataforma ejecutable en PC y Android</li>
+                <li><strong>Fuente de alimentación regulable</strong> – Diseño de circuitos impresos, Universidad de Guanajuato</li>
+            </ul>
+
+            <h2>Habilidades // Competencias</h2>
+            <ul>
+                <li><img class="flag" src="https://flagcdn.com/w20/us.png" alt="USA"> Inglés – Nivel C2</li>
+                <li>Conocimiento Excel (Intermedio)</li>
+                <li>Manejo de Inteligencia Artificial</li>
+                <li>Manejo de SQL Server, PostgreSQL</li>
+                <li>Manejo de n8n, Cursor</li>
+                <li>Programación en C, C++, C#, Python, JavaScript, HTML, CSS, JS</li>
+                <li>Modelado con AutoCAD</li>
+                <li>Manejo de Arduino y dispositivos electrónicos en general</li>
+                <li>Diseño de circuitos electrónicos</li>
+                <li>Manejo de microcontroladores</li>
+                <li>Soldadura básica</li>
+                <li>Edición de videos Sony Vegas Pro</li>
+            </ul>
+
+            <h2>Aptitudes</h2>
+            <ul>
+                <li>Excelente trabajando en equipo</li>
+                <li>Responsable</li>
+                <li>Analítico</li>
+                <li>Autodidacta</li>
+                <li>Organizado</li>
+                <li>Hábil trabajando bajo presión</li>
+                <li>Facilidad de palabra al relacionarse</li>
+            </ul>
+        </main>
+
+        <aside>
+            <h2>Portafolio Digital</h2>
+            <p class="portfolio">
+                <a href="https://zumayinsky.github.io/portafolio-zumaya/">zumayinsky.github.io/portafolio-zumaya</a>
+            </p>
+        </aside>
+    </div>
+</div>
+
+</body>
+</html>

@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "datos.js",
- "scripts": {
-  "dev": "vite --open chrome"
-},
+  "scripts": {
+    "dev": "vite --open chrome",
+    "generate:cv": "node scripts/generate-cv.mjs"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Zumayinsky/portafolio-zumaya.git"
@@ -18,6 +19,7 @@
   },
   "homepage": "https://zumayinsky.github.io/portafolio-zumaya/",
   "devDependencies": {
+    "puppeteer": "^25.2.1",
     "vite": "^8.1.0"
   }
 }
