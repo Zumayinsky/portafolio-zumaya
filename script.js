@@ -75,7 +75,7 @@
 
 
 
-    { "nombre": "Inglés Nivel C1", "icono": "fas fa-language" }
+    { "nombre": "Inglés Nivel C2", "icono": "fas fa-language" }
 
 
   ],
