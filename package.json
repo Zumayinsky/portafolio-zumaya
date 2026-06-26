@@ -1,0 +1,23 @@
+{
+  "name": "biocv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "datos.js",
+ "scripts": {
+  "dev": "vite --open chrome"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zumayinsky/git-clone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zumayinsky/git-clone/issues"
+  },
+  "homepage": "https://github.com/Zumayinsky/git-clone#readme",
+  "devDependencies": {
+    "vite": "^8.1.0"
+  }
+}

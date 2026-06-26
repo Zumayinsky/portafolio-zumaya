@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZUMATEK | Servicios Digitales 🛠️</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* ESTILO MATRIX COHERENTE */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: #000; color: #fff; font-family: 'Segoe UI', sans-serif; min-height: 100vh; overflow-x: hidden; }
+        
+        #matrix-canvas { position: fixed; top: 0; left: 0; z-index: -1; opacity: 0.5; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; position: relative; z-index: 1; }
+
+        header { text-align: center; margin-bottom: 50px; }
+        h1 { color: #00ff41; font-size: 3rem; text-transform: uppercase; letter-spacing: 5px; text-shadow: 0 0 15px rgba(0, 255, 65, 0.5); margin-bottom: 5px; }
+        
+        /* 1. SLOGAN ACTUALIZADO */
+        .slogan { color: #38bdf8; font-size: 1.1rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; opacity: 0.9; }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .service-card {
+            background: rgba(10, 10, 10, 0.9);
+            border: 1px solid rgba(0, 255, 65, 0.2);
+            border-radius: 24px;
+            overflow: hidden;
+            transition: 0.4s;
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: #38bdf8;
+            box-shadow: 0 0 30px rgba(56, 189, 248, 0.3);
+        }
+
+        /* 2. CONTENEDOR DE IMAGEN AGRANDADO (PROPORCIÓN 1:1 PARA 1024x1024) */
+        .image-container {
+            width: 100%;
+            aspect-ratio: 1 / 1; /* Esto garantiza que el cuadro sea un cuadrado perfecto */
+            background: #050505;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(0, 255, 65, 0.1);
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* 'contain' asegura que se vea la imagen completa de 1024x1024 sin recortes */
+            transition: 0.5s;
+        }
+
+        .service-card:hover img { transform: scale(1.05); }
+
+        .content { padding: 25px; text-align: center; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+        .content h3 { color: #00ff41; margin-bottom: 12px; font-size: 1.4rem; letter-spacing: 1px; }
+        .content p { color: #aaa; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; }
+
+        .btn-contact {
+            display: inline-block;
+            padding: 12px;
+            background: rgba(0, 255, 65, 0.05);
+            color: #00ff41;
+            text-decoration: none;
+            border-radius: 12px;
+            border: 1px solid #00ff41;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        .btn-contact:hover { background: #00ff41; color: #000; box-shadow: 0 0 15px #00ff41; }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 25px;
+            color: #38bdf8;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .back-btn:hover { text-shadow: 0 0 10px #38bdf8; color: #fff; }
+    </style>
+</head>
+<body>
+
+    <canvas id="matrix-canvas"></canvas>
+
+    <div class="container">
+        <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> [ VOLVER AL NÚCLEO ]</a>
+        
+        <header>
+            <h1>ZUMATEK</h1>
+            <div class="slogan">System & Software Solutions</div>
+        </header>
+
+        <div class="gallery-grid">
+            
+            <div class="service-card">
+                <div class="image-container">
+                    <img src="tu_anuncio_1.jpeg" alt="Servicio ZUMATEK">
+                </div>
+                <div class="content">
+                    <h3>Servicios Academicos de Alto Rendimiento</h3>
+                    <p>Asesorías especializadas para cualquier tipo de nivel educativo & cualquier asignatura.</p>
+                    <a href="https://wa.me/524622647020" class="btn-contact">Contactar vía WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="image-container">
+                    <img src="tu_anuncio_2.jpeg" alt="Servicio ZUMATEK">
+                </div>
+                <div class="content">
+                    <h3>Desarrollo de Software</h3>
+                    <p>Soluciones digitales personalizadas.</p>
+                    <a href="https://wa.me/524622647020" class="btn-contact">Contactar vía WhatsApp</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // SCRIPT MATRIX (Mantenido igual para coherencia visual)
+        const canvas = document.getElementById('matrix-canvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+        const letters = "01"; const fontSize = 16;
+        const columns = canvas.width / fontSize;
+        const drops = Array(Math.floor(columns)).fill(1);
+        function drawMatrix() {
+            ctx.fillStyle = "rgba(0, 0, 0, 0.1)"; ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = "#00ff41"; ctx.font = fontSize + "px monospace";
+            drops.forEach((y, i) => {
+                const text = letters[Math.floor(Math.random() * letters.length)];
+                ctx.fillText(text, i * fontSize, y * fontSize);
+                if (y * fontSize > canvas.height && Math.random() * 0.98) drops[i] = 0;
+                drops[i]++;
+            });
+        }
+        setInterval(drawMatrix, 50);
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+        });
+    </script>
+</body>
+</html>
