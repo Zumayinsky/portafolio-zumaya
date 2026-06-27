@@ -4,8 +4,11 @@ import path from 'path';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
-const htmlPath = path.join(root, 'cv.html');
-const pdfPath = path.join(root, 'CV_Juan_Carlos_Zumaya.pdf');
+
+// Ruta de origen (Plantilla en Inglés)
+const htmlPath = path.join(root, 'cv-en.html');
+// Ruta de destino (Tu nuevo PDF en Inglés)
+const pdfPath = path.join(root, 'CV_Juan_Carlos_Zumaya_EN.pdf');
 
 const browser = await puppeteer.launch({ headless: true });
 const page = await browser.newPage();
@@ -22,4 +25,4 @@ await page.pdf({
 });
 
 await browser.close();
-console.log(`CV generado: ${pdfPath}`);
+console.log(`¡PDF en Inglés generado con éxito!: ${pdfPath}`);
